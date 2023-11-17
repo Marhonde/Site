@@ -1,0 +1,152 @@
+/* css анимации */
+@keyframes slide-up {
+    0% {
+        transform: translate(0, 70px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    opacity: 0;
+    animation: slide-up 0.8s forwards ;
+}
+
+.paragraph {
+    overflow: hidden;
+    opacity: 0;
+    animation: slide-up 0.8s forwards 0.3s;
+}
+
+/* .microchips {
+    opacity: 0;
+    animation: slide-up 0.8s forwards 0.7s;
+}
+
+.shtukovins {
+    opacity: 0;
+    animation: slide-up 0.8s forwards 0.9s ;
+} */
+
+.img_in_cards1 {
+    opacity: 0;
+    animation: slide-up 0.8s forwards 1.5s;
+}
+
+.img_in_cards2 {
+    opacity: 0;
+    animation: slide-up 0.8s forwards 1.7s;
+}
+
+.img_in_cards3 {
+    opacity: 0;
+    animation: slide-up 0.8s forwards 1.9s;
+}
+
+.img_in_cards4 {
+    opacity: 0;
+    animation: slide-up 0.8s forwards 2.1s;
+}
+
+
+/* js анимации */
+.rules_of_the_game {
+    opacity: 0;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+.microchips, .shtukovins {
+    opacity: 0;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+/* .shtukovins {
+    opacity: 0;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+} */
+
+.heading_2 {
+    opacity: 0;
+    overflow: hidden;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+.heading_2._active {
+    opacity: 1;
+    /* overflow: hidden; */
+    transform: translate(0, 0);
+    transition: all 0.8s ease 1s;
+}
+
+.heading_3 {
+    opacity: 0;
+    /* margin-bottom: 40px; */
+    overflow: hidden;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+.heading_3._active {
+    opacity: 1;
+    /* margin-bottom: 40px; */
+    transform: translate(0, 0);
+    transition: all 0.8s ease 1.5s;
+}
+
+.paragraph_1 {
+    opacity: 0;
+    overflow: hidden;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+.paragraph_1._active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.8s ease 1.2s;
+}
+
+.paragraph_2 {
+    opacity: 0;
+    overflow: hidden;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+.paragraph_2._active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.8s ease 1.7s;
+}
+
+.heading_4 {
+    text-align: center;
+    opacity: 0;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+.paragraph_3 {
+    opacity: 0;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+.paragraph_3._active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.8s ease 0.4s;
+}
+
+.rules_of_the_game._active, .heading_4._active, .microchips._active, .shtukovins._active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.8s ease 0s;
+}

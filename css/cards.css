@@ -1,0 +1,79 @@
+.cards {
+    position: relative;
+    display: flex;
+    width: calc(100% - 10%);
+    margin: 0 5% 0 5%;
+    flex-direction: row;
+}
+
+.heading_2, .heading_3 {
+    text-align: center;
+}
+
+.microchips {
+    position: relative;
+    width: calc(40% - 5%);
+    padding: 14px;
+    background: #94b5cd;
+    margin-top: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    color: #333;
+    border: 1px solid #afd6f3;
+    border-radius: 10px;
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.shtukovins {
+    position: relative;
+    width: calc(40% - 5%);
+    padding: 14px;
+    background: #8abb99;
+    border: 1px solid #a6e1b8;
+    margin-top: 5%;
+    text-align: justify;
+    color: #333;
+    border-radius: 10px;
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.imgs {
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img_to_center {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.img_content {
+    flex-direction: row;
+    width: 50%;
+    /* position:fixed ; */
+    max-width: 300px;
+    display: flex;
+    /* width: 100%; */
+    /* width: 164.13px;
+    height: 236.84px; */
+    margin: 2% 0 0 0;
+    justify-content: center;
+}
+
+.img_in_cards1, .img_in_cards2, .img_in_cards3, .img_in_cards4 {
+    width: 180%;
+    /* max-width: 3000px; */
+    /* width: 164.13px;
+    height: 236.84px; */
+    margin: 6% 2.5% 0;
+    /* padding: 0 0 0 10%; */
+}

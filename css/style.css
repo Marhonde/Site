@@ -1,0 +1,79 @@
+/* импортириуем шрифт */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap'); */
+
+/* применяем его ко всем объектам */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    /* height: 2000px; */
+}
+
+/* свойства картинки на заднем фоне */
+#BackI {
+    background-image: url(../img/1-15.jpg);
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    background-size: cover;
+    position: fixed;
+    /* margin-top: 80px; */
+}
+
+/* свойства основного блока */
+main {
+    position: absolute;
+    width: calc(100% - 10%);
+    height: 3000px;
+    margin: 25% 5% 0 5%;
+    background-color: #4d4d4d;
+    border: 1px solid #737373;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    /* box-shadow: -4px -4px 6px rgba(0, 0, 0, 0.2); */
+    flex-direction: column;
+}
+
+/* свойства блока описания игры */
+.description_of_the_game {
+    position: relative;
+    width: calc(95%-5%);
+    padding: 10px 15px 10px;
+    background: #DDDDDD;
+    border: 1px solid #ffffff;
+    color: #333;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    word-spacing: 5px;
+    line-height: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    max-width: 100%;
+    opacity: 0;
+    animation: slide-up 0.8s forwards 0.3s;
+}
+
+.heading_4 {
+    text-align: center;
+}
+
+/* свойства блока правил игры */
+.rules_of_the_game {
+    position: relative;
+    width: calc(95%-5%);
+    padding: 10px 15px 10px;
+    background: #DDDDDD;
+    border: 1px solid #ffffff;
+    color: #333;
+    margin: 5%;
+    text-align: justify;
+    word-spacing: 5px;
+    line-height: 30px;
+    border-radius: 10px;
+    max-width: 100%;
+    font-weight: bold;
+}
