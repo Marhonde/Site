@@ -14,7 +14,7 @@ if(animItems.length > 0) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
             }
 
-            if((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
+            if((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight) && !animItem.classList.contains('_newActive')) {
                 animItem.classList.add('_active');
             }else {
                 if(!animItem.classList.contains('_anim-no-hide'))

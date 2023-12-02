@@ -21,57 +21,35 @@ h1 {
     animation: slide-up 0.8s forwards 0.3s;
 }
 
-/* .microchips {
-    opacity: 0;
-    animation: slide-up 0.8s forwards 0.7s;
-}
-
-.shtukovins {
-    opacity: 0;
-    animation: slide-up 0.8s forwards 0.9s ;
-} */
-
 .img_in_cards1 {
     opacity: 0;
-    animation: slide-up 0.8s forwards 1.5s;
+    animation: slide-up 0.8s forwards 1s;
 }
 
 .img_in_cards2 {
     opacity: 0;
-    animation: slide-up 0.8s forwards 1.7s;
+    animation: slide-up 0.8s forwards 1.2s;
 }
 
 .img_in_cards3 {
     opacity: 0;
-    animation: slide-up 0.8s forwards 1.9s;
+    animation: slide-up 0.8s forwards 1.4s;
 }
 
 .img_in_cards4 {
     opacity: 0;
-    animation: slide-up 0.8s forwards 2.1s;
+    animation: slide-up 0.8s forwards 1.6s;
 }
 
 
 /* js анимации */
-.rules_of_the_game {
+.rules_of_the_game, .microchips, .shtukovins {
     opacity: 0;
     transform: translate(0, 70px);
     transition: all 0.8s ease 0s;
 }
 
-.microchips, .shtukovins {
-    opacity: 0;
-    transform: translate(0, 70px);
-    transition: all 0.8s ease 0s;
-}
-
-/* .shtukovins {
-    opacity: 0;
-    transform: translate(0, 70px);
-    transition: all 0.8s ease 0s;
-} */
-
-.heading_2 {
+.heading_2, .heading_3, .paragraph_1, .paragraph_2 {
     opacity: 0;
     overflow: hidden;
     transform: translate(0, 70px);
@@ -80,50 +58,26 @@ h1 {
 
 .heading_2._active {
     opacity: 1;
-    /* overflow: hidden; */
     transform: translate(0, 0);
-    transition: all 0.8s ease 1s;
-}
-
-.heading_3 {
-    opacity: 0;
-    /* margin-bottom: 40px; */
-    overflow: hidden;
-    transform: translate(0, 70px);
-    transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0.5s;
 }
 
 .heading_3._active {
     opacity: 1;
-    /* margin-bottom: 40px; */
     transform: translate(0, 0);
-    transition: all 0.8s ease 1.5s;
-}
-
-.paragraph_1 {
-    opacity: 0;
-    overflow: hidden;
-    transform: translate(0, 70px);
-    transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 1s;
 }
 
 .paragraph_1._active {
     opacity: 1;
     transform: translate(0, 0);
-    transition: all 0.8s ease 1.2s;
-}
-
-.paragraph_2 {
-    opacity: 0;
-    overflow: hidden;
-    transform: translate(0, 70px);
-    transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0.7s;
 }
 
 .paragraph_2._active {
     opacity: 1;
     transform: translate(0, 0);
-    transition: all 0.8s ease 1.7s;
+    transition: all 0.8s ease 1.2s;
 }
 
 .heading_4 {

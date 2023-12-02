@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    /* height: 2000px; */
+    height: 2000px;
 }
 
 /* свойства картинки на заднем фоне */
@@ -34,7 +34,7 @@ main {
     font-size: 16px;
     border-radius: 10px;
     /* box-shadow: -4px -4px 6px rgba(0, 0, 0, 0.2); */
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 /* свойства блока описания игры */
@@ -55,10 +55,6 @@ main {
     max-width: 100%;
     opacity: 0;
     animation: slide-up 0.8s forwards 0.3s;
-}
-
-.heading_4 {
-    text-align: center;
 }
 
 /* свойства блока правил игры */

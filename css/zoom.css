@@ -1,50 +1,19 @@
-.paragraph_1._active._zoom4, .paragraph_2._active._zoom4 {
-    font-size: 15px;
-    transition: all 0s ease 0s;
+.paragraph_1._zoom5, .paragraph_2._zoom5 {
+    font-size: 13px;
 }
 
-.paragraph_1._active._zoom5, .paragraph_2._active._zoom5 {
-    font-size: 12px;
-    transition: all 0s ease 0s;
-}
-
-.paragraph_1._active._zoom3, .paragraph_2._active._zoom3 {
-    font-size: 22.1px;
-    transition: all 0s ease 0s;
-}
-
-/* .paragraph_2._active._zoom4 {
-    font-size: 15px;
-    transition: all 0s ease 0s;
-} */
-
-/* .paragraph_2._active._zoom5 {
-    font-size: 12px;
-    transition: all 0s ease 0s;
-} */
-
-.heading_3._active._zoom4h, .heading_2._active._zoom4h {
-    font-size: 23px;
-    transition: all 0s ease 0s;
-}
-
-.heading_2._active._zoom3h, .heading_3._active._zoom3h {
-    font-size: 34px;
-    transition: all 0s ease 0s;
-}
-
-.heading_2._active._zoom5h, .heading_3._active._zoom5h {
+.heading_2._zoom5h, .heading_3._zoom5h {
     font-size: 20px;
     transition: all 0s ease 0s;
 }
 
-.microchips._active._zoomPadd, .shtukovins._active._zoomPadd {
+.microchips._zoomPadd, .shtukovins._zoomPadd {
     padding: 5px;
     transition: all 0s ease 0s;
 }
 
-.microchips._active._zoomPadd3, .shtukovins._active._zoomPadd3 {
-    padding: 9px;
-    /* font-size: 22.9px; */
-    transition: all 0s ease 0s;
+.microchips._newActive, .shtukovins._newActive, .paragraph_1._newActive, .paragraph_2._newActive, .heading_2._newActive, .heading_3._newActive {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: none;
 }
