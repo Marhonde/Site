@@ -67,7 +67,7 @@ if (zoomPadsMS.length > 0) {
             }
 
             // Заголовок микросхем
-            if (currentZoom === 500) {
+            if (currentZoom >= 500) {
                 zoomItemH2.classList.add('_zoom5h');
             } else {
                 zoomItemH2.classList.remove('_zoom5h')
