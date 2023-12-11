@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/cards.css"> <!-- стили блока карты и блоков внутри него -->
     <link rel="stylesheet" href="css/animations.css"> <!-- анимации блоков(keyframes и анимации через js) -->
     <link rel="stylesheet" href="css/zoom.css"> <!-- изменение размера текста при приближении внутри блока карты -->
+    <link type="image/png" href=""> <!-- логотип -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="'Машина времени' - карточная игра"> <!-- Описание страницы -->
     <meta name="author" content="Кузнецов Семён"> <!-- указывает автора страницы -->
@@ -14,6 +16,11 @@
     <title>Машина времени</title>
     <!-- скрипт для скачивания файла из проекта -->
     <script src="js/downloadGame.js"></script>
+    <script>
+        function openRegistrationFile() {
+            window.open("php/registration.php");
+        }
+    </script>
 </head>
 <body>
     <!-- картинка на заднем фоне сайта -->
@@ -22,8 +29,17 @@
     <div class="wrapper">
         <!-- шапка сайта -->
         <header>
-            <form action="php/registration.php" method="post" class="form-content">
-                <button type="button" class="registration_button" name="registration">Регистрация</button>
+            <nav>
+                
+            </nav>
+            <form method="post" class="form-content">
+                <div class="log-button-position">
+                    <button type="button" class="login-button" name="login" onclick="openRegistrationFile()">
+                        <p class="login-text">
+                            Вход
+                        </p>
+                    </button>
+                </div>
             </form>
         </header>
 
@@ -49,7 +65,7 @@
                     <!-- объявление блока для размещения картинки внутри -->
                     <div class="imgs">
 
-                        <!-- объявление блока для центрирования картинок -->
+                        <!-- объявлефяяние блока для центрирования картинок -->
                         <div class="img_to_center">
                             <!-- объявление блока для размещения картинки внутри -->
                             <div class="img_content">
