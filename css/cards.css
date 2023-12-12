@@ -10,35 +10,31 @@
     text-align: center;
 }
 
-.microchips {
+.microchips, .shtukovins {
     position: relative;
     width: calc(40% - 5%);
     padding: 9px;
-    background: #94b5cd;
     margin-top: 5%;
     margin-right: 5%;
     text-align: justify;
     color: #333;
-    border: 1px solid #afd6f3;
     border-radius: 10px;
     flex: 1;
     font-size: 16px;
     font-weight: bold;
+    /* word-spacing: 5px; */
+    line-height: 30px;
 }
 
 .shtukovins {
-    position: relative;
-    width: calc(40% - 5%);
-    padding: 9px;
     background: #8abb99;
     border: 1px solid #a6e1b8;
-    margin-top: 5%;
-    text-align: justify;
-    color: #333;
-    border-radius: 10px;
-    flex: 1;
-    font-size: 16px;
-    font-weight: bold;
+    margin-right: 0;
+}
+
+.microchips {
+    background: #94b5cd;
+    border: 1px solid #afd6f3;
 }
 
 .imgs {

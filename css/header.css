@@ -30,17 +30,30 @@
     color: #fff;
     width: 140px;
     height: 27px;
-    margin: 3% 12.2% 0 0 ;
+    margin: 5% 12.2% 0 0 ;
     max-height: max-content;
     width: 174px;
     height: 43px;
     /* padding: 0 0 20px 0; */
-    background: #4D4D4D;
-    border: 1px solid #737373;
+    border: 1px solid #7e7e7e;
+    background: #585858;
+    /* background: #4D4D4D;
+    border: 1px solid #737373; */
     border-radius: 10px;
     cursor: pointer;
+    transition: all ease 0.2s;
 }
 
-.login-text {
-    margin: 0 0 0 0;
+.login-button:hover {
+    background: #737373;
+    border: 1px solid #999999;
+}
+
+.login-button p {
+    margin: 0;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }

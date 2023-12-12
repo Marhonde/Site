@@ -1,0 +1,37 @@
+footer {
+    height: 250px;
+    padding-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav span {
+    display: flex;
+    margin: 0 2.5px 0 0;
+    align-items: center;
+    color: #999999;
+}
+
+nav li {
+    display: inline;
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+    margin: 2.5px;
+}

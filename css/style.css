@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    height: 2000px;
+    /* height: 2000px; */
 }
 
 /* свойства картинки на заднем фоне */
@@ -26,13 +26,14 @@ body {
 main {
     position: absolute;
     width: calc(100% - 10%);
-    height: 3000px;
+    /* height: 2000px; */
     margin: 25% 5% 0 5%;
     background-color: #4d4d4d;
     border: 1px solid #737373;
     color: #fff;
     font-size: 16px;
     border-radius: 10px;
+    /* padding-bottom: 100px; */
     /* box-shadow: -4px -4px 6px rgba(0, 0, 0, 0.2); */
     /* flex-direction: column; */
 }
@@ -48,7 +49,7 @@ main {
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
-    word-spacing: 5px;
+    /* word-spacing: 5px; */
     line-height: 30px;
     font-weight: bold;
     border-radius: 10px;
@@ -67,7 +68,7 @@ main {
     color: #333;
     margin: 5%;
     text-align: justify;
-    word-spacing: 5px;
+    /* word-spacing: 5px; */
     line-height: 30px;
     border-radius: 10px;
     max-width: 100%;

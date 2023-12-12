@@ -2,11 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/header.css"> <!-- стиль шапки -->
-    <link rel="stylesheet" href="css/style.css"> <!-- основные стили страницы -->
-    <link rel="stylesheet" href="css/cards.css"> <!-- стили блока карты и блоков внутри него -->
-    <link rel="stylesheet" href="css/animations.css"> <!-- анимации блоков(keyframes и анимации через js) -->
-    <link rel="stylesheet" href="css/zoom.css"> <!-- изменение размера текста при приближении внутри блока карты -->
+    <link rel="stylesheet" href="../css/downloadGameButton.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css"> <!-- стиль шапки -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- основные стили страницы -->
+    <link rel="stylesheet" href="../css/cards.css"> <!-- стили блока карты и блоков внутри него -->
+    <link rel="stylesheet" href="../css/animations.css"> <!-- анимации блоков(keyframes и анимации через js) -->
+    <link rel="stylesheet" href="../css/zoom.css"> <!-- изменение размера текста при приближении внутри блока карты -->
     <link type="image/png" href=""> <!-- логотип -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +17,10 @@
     <meta name="keywords" content="игры, настольная игра, карточная игра, вторая мировая война, скачать машина времени"> <!-- подсказки для посковой системы -->
     <title>Машина времени</title>
     <!-- скрипт для скачивания файла из проекта -->
-    <script src="js/downloadGame.js"></script>
+    <script src="../js/downloadGame.js"></script>
     <script>
-        function openRegistrationFile() {
-            window.open("php/registration.php");
+        function openLoginFile(fileName) {
+            window.open(fileName);
         }
     </script>
 </head>
@@ -29,13 +31,10 @@
     <div class="wrapper">
         <!-- шапка сайта -->
         <header>
-            <nav>
-                
-            </nav>
             <form method="post" class="form-content">
                 <div class="log-button-position">
-                    <button type="button" class="login-button" name="login" onclick="openRegistrationFile()">
-                        <p class="login-text">
+                    <button type="button" class="login-button" name="login" onclick="openLoginFile('../php/login.php')">
+                        <p>
                             Вход
                         </p>
                     </button>
@@ -70,13 +69,13 @@
                             <!-- объявление блока для размещения картинки внутри -->
                             <div class="img_content">
                                 <!-- добавление картинки -->
-                                <img class="img_in_cards1" src="img/1-1.png" alt="Вторжение Германии в Польшу">
+                                <img class="img_in_cards1" src="../img/1-1.png" alt="Вторжение Германии в Польшу">
                             </div>
                         </div>
 
                         <div class="img_to_center">
                             <div class="img_content">
-                                <img class="img_in_cards2" src="img/2-1.png" alt="Пакт Молотова-Риббентропа">
+                                <img class="img_in_cards2" src="../img/2-1.png" alt="Пакт Молотова-Риббентропа">
                             </div>
                         </div>
 
@@ -96,15 +95,17 @@
                     <div class="imgs">
                         <div class="img_to_center">
                             <div class="img_content">
-                                <img class="img_in_cards3" src="img/паяльник.png" alt="Паяльник">
+                                <img class="img_in_cards3" src="../img/паяльник.png" alt="Паяльник">
                             </div>
                         </div>
+
                         <div class="img_to_center">
                             <div class="img_content">
-                                <img class="img_in_cards4" src="img/процессор.png" alt="Процессор">
+                                <img class="img_in_cards4" src="../img/процессор.png" alt="Процессор">
                             </div>
                         </div>
                     </div>
+
                     <h2 class="heading_3 _anim-items _anim-no-hide">Штуковины</h2>
                     <div class="paragraph_2 _anim-items _anim-no-hide">
                         <p>
@@ -128,17 +129,29 @@
             <!-- конец блока с правилами -->
 
             <!-- кнопка для скачивая файла -->
-            <button type="button" onclick="/* функция из download_gamejs */downloadFile('Game/тут должна быть игра.txt')">Скачать игру</button>
+            <div class="download-btn-position">
+                <button type="button" onclick="/* функция из downloadGame.js */downloadFile('../Game/тут должна быть игра.txt')" class="download-game">Скачать игру</button>
+            </div>
+
+            <footer>
+                <nav>
+                    <ul>
+                        <span>Связь с разработчиком: </span>
+                        <li><a href="https://github.com/Marhonde"><img src="../img/GitHub.svg" alt="GitHub" class="github"></a></li>
+                        <li><a href="https://vk.com/marhonde"><img src="../img/vk.svg" alt="ВК"></a></li>
+                        <li><a href="https://telegram.me/Marh0nde"><img src="../img/tg.svg" alt="Telegram"></a></li>
+                        <!-- <span>Поддержка: </span>
+                        <li><a href="mailto:SemenKuzer@mail.ru"><img src="img/email.svg" alt="Почта"></a></li> -->
+                    </ul>
+                </nav>
+            </footer>
         </main>
         
-        <footer>
-            <a href="mailto:SemenKuzer@mail.ru">Поддержка</a>
-        </footer>
     </div>
     </body>
     <!-- подключение скрипта чинящий текст в блоке карты при приближении -->
-    <script src="js/zoom.js"></script>
+    <script src="../js/zoom.js"></script>
     <!-- подключение скрипта анимаций -->
-    <script src="js/animScroll.js"></script>
+    <script src="../js/animScroll.js"></script>
 </body>
 </html>
