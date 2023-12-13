@@ -10,7 +10,7 @@ if (zoomPadsMS.length > 0) {
 
     function zoomTextOnScaling() {
         var currentZoom = Math.round(window.devicePixelRatio * 100);
-        
+
         for (let index = 0; index < zoomPadsMS.length; index++) {
             const zoomItemP1 = zoomItems[index];
             const zoomItemP2 = zoomP2[index];
@@ -25,6 +25,7 @@ if (zoomPadsMS.length > 0) {
             } else {
                 // setTimeout(removeZoomPaddMicrochips)
                 zoomItemMS.classList.remove('_zoomPadd');
+                zoomItemMS.classList.remove('_active--short');
                 zoomItemMS.classList.remove('_active');
                 zoomItemMS.classList.add('_newActive');
             }
@@ -35,6 +36,7 @@ if (zoomPadsMS.length > 0) {
             } else {
                 // setTimeout(removeZoomPaddShtukovins)
                 zoomItemSS.classList.remove('_zoomPadd');
+                zoomItemMS.classList.remove('_active--short');
                 zoomItemSS.classList.remove('_active');
                 zoomItemSS.classList.add('_newActive');
             }
@@ -44,6 +46,7 @@ if (zoomPadsMS.length > 0) {
                 zoomItemP1.classList.add('_zoom5');
             } else {
                 zoomItemP1.classList.remove('_zoom5');
+                zoomItemMS.classList.remove('_active--short');
                 zoomItemP1.classList.remove('_active');
                 zoomItemP1.classList.add('_newActive');
             }
@@ -53,6 +56,7 @@ if (zoomPadsMS.length > 0) {
                 zoomItemP2.classList.add('_zoom5');
             } else {
                 zoomItemP2.classList.remove('_zoom5');
+                zoomItemMS.classList.remove('_active--short');
                 zoomItemP2.classList.remove('_active');
                 zoomItemP2.classList.add('_newActive');
             }
@@ -61,7 +65,8 @@ if (zoomPadsMS.length > 0) {
             if (currentZoom >= 500) {
                 zoomItemH3.classList.add('_zoom5h');
             } else {
-                zoomItemH3.classList.remove('_zoom5h')
+                zoomItemH3.classList.remove('_zoom5h');
+                zoomItemMS.classList.remove('_active--short');
                 zoomItemH3.classList.remove('_active');
                 zoomItemH3.classList.add('_newActive');
             }
@@ -70,10 +75,12 @@ if (zoomPadsMS.length > 0) {
             if (currentZoom >= 500) {
                 zoomItemH2.classList.add('_zoom5h');
             } else {
-                zoomItemH2.classList.remove('_zoom5h')
+                zoomItemH2.classList.remove('_zoom5h');
+                zoomItemMS.classList.remove('_active--short');
                 zoomItemH2.classList.remove('_active');
                 zoomItemH2.classList.add('_newActive');
             }
         }
+
     }
 }

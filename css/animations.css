@@ -20,7 +20,7 @@ h1 {
     opacity: 0;
     animation: slide-up 0.8s forwards 0.3s;
 }
-
+/* 
 .img_in_cards1 {
     opacity: 0;
     animation: slide-up 0.8s forwards 1s;
@@ -39,7 +39,7 @@ h1 {
 .img_in_cards4 {
     opacity: 0;
     animation: slide-up 0.8s forwards 1.6s;
-}
+} */
 
 
 /* js анимации */
@@ -55,6 +55,8 @@ h1 {
     transform: translate(0, 70px);
     transition: all 0.8s ease 0s;
 }
+
+
 
 .heading_2._active {
     opacity: 1;
@@ -103,4 +105,37 @@ h1 {
     opacity: 1;
     transform: translate(0, 0);
     transition: all 0.8s ease 0s;
+}
+
+
+
+
+.img_in_cards1, .img_in_cards2, .img_in_cards3, .img_in_cards4 {
+    opacity: 0;
+    transform: translate(0, 70px);
+    transition: all 0.8s ease 0s;
+}
+
+.img_in_cards1._active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.8s ease 0.2s;
+}
+
+.img_in_cards2._active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.8s ease 0.35s;
+}
+
+.img_in_cards3._active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.8s ease 0.45s;
+}
+
+.img_in_cards4._active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.8s ease 0.55s;
 }

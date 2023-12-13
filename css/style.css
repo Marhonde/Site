@@ -13,7 +13,7 @@ body {
 
 /* свойства картинки на заднем фоне */
 #BackI {
-    background-image: url(../img/1-15.jpg);
+    background-image: url(../img/BackgroundImage.png);
     height: 100vh;
     width: 100vw;
     object-fit: cover;

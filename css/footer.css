@@ -30,8 +30,14 @@ nav li {
     display: inline;
 }
 
-footer img {
+footer svg {
     width: 25px;
     height: 25px;
     margin: 2.5px;
+    fill: #cccccc;
+    transition: all ease 0.2s;
+}
+
+footer svg:hover {
+    fill: #fff;
 }
