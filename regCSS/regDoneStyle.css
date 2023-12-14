@@ -1,0 +1,49 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+#BackI {
+    background-image: url(../img/BackgroundImage.png);
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    background-size: cover;
+    position: fixed;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 587px;
+    height: 396px;
+    background: #4D4D4D;
+    border: 1px solid #737373;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #BFBFBF;
+    transition: all ease 0.2s;
+}
+
+h1 a:hover {
+    color: #fff;
+}
