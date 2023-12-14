@@ -1,4 +1,4 @@
-.email, .password {
+.email, .password, .confirm-password {
     width: 57.5%;
     height: 55px;
     margin: 0 107px 57px;
@@ -15,23 +15,23 @@
     color: #5C7180;
 }
 
-.email:focus, .password:focus {
+.email:focus, .password:focus, .confirm-password {
     outline: none;
 }
 
-.password {
+.password, .confirm-password {
     background-color: #8ABB99!important;
     border: 1px solid #A6E1B8!important;
 }
 
-.password::placeholder {
+.password::placeholder, .confirm-password::placeholder {
     color: #516E5A;
 }
 
 .enter-button {
     width: 63.7%;
     height: 80px;
-    margin: 0 107px 328px;
+    margin: 0 107px 185px;
     font-size: 24px;
     background-color: #737373;
     border: 1px solid #999999;
@@ -44,19 +44,4 @@
 .enter-button:hover {
     background-color: #999999;
     border: 1px solid #BFBFBF;
-}
-
-.forgot-password {
-    color: #999999;
-    margin: 0 0 319px 107px;
-}
-
-.forgot-password a {
-    color: #CCCCCC;
-    text-decoration: none;
-    transition: all ease 0.2s;
-}
-
-.forgot-password a:hover {
-    color: #fff;
 }

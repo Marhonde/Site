@@ -33,17 +33,24 @@ main {
 }
 
 h1 {
-    color: #fff;
-    margin: 48px 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 30px 0 57px 0;
 }
 
 .have-account {
     color: #999;
+    font-size: 16px;
 }
 
-.have-account a {
+.have-account a {   
     color: #CCCCCC;
     text-decoration: none;
+    transition: all ease 0.2s;
 }
 
 .have-account a:hover {
