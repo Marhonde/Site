@@ -1,14 +1,9 @@
-/* импортириуем шрифт */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap'); */
-
-/* применяем его ко всем объектам */
 * {
     font-family: 'Roboto', sans-serif;
 }
 
 body {
     margin: 0;
-    /* height: 2000px; */
 }
 
 /* свойства картинки на заднем фоне */
@@ -19,7 +14,6 @@ body {
     object-fit: cover;
     background-size: cover;
     position: fixed;
-    /* margin-top: 80px; */
 }
 
 /* свойства основного блока */
@@ -33,9 +27,6 @@ main {
     color: #fff;
     font-size: 16px;
     border-radius: 10px;
-    /* padding-bottom: 100px; */
-    /* box-shadow: -4px -4px 6px rgba(0, 0, 0, 0.2); */
-    /* flex-direction: column; */
 }
 
 /* свойства блока описания игры */
@@ -49,7 +40,6 @@ main {
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
-    /* word-spacing: 5px; */
     line-height: 30px;
     font-weight: bold;
     border-radius: 10px;
@@ -68,7 +58,6 @@ main {
     color: #333;
     margin: 5%;
     text-align: justify;
-    /* word-spacing: 5px; */
     line-height: 30px;
     border-radius: 10px;
     max-width: 100%;

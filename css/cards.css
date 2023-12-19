@@ -38,7 +38,6 @@
 }
 
 .imgs {
-    /* position: relative; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,21 +54,13 @@
 .img_content {
     flex-direction: row;
     width: 50%;
-    /* position:fixed ; */
     max-width: 300px;
     display: flex;
-    /* width: 100%; */
-    /* width: 164.13px;
-    height: 236.84px; */
     margin: 2% 0 0 0;
     justify-content: center;
 }
 
 .img_in_cards1, .img_in_cards2, .img_in_cards3, .img_in_cards4 {
     width: 180%;
-    /* max-width: 3000px; */
-    /* width: 164.13px;
-    height: 236.84px; */
     margin: 6% 2.5% 0;
-    /* padding: 0 0 0 10%; */
 }

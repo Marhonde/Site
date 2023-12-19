@@ -20,27 +20,6 @@ h1 {
     opacity: 0;
     animation: slide-up 0.8s forwards 0.3s;
 }
-/* 
-.img_in_cards1 {
-    opacity: 0;
-    animation: slide-up 0.8s forwards 1s;
-}
-
-.img_in_cards2 {
-    opacity: 0;
-    animation: slide-up 0.8s forwards 1.2s;
-}
-
-.img_in_cards3 {
-    opacity: 0;
-    animation: slide-up 0.8s forwards 1.4s;
-}
-
-.img_in_cards4 {
-    opacity: 0;
-    animation: slide-up 0.8s forwards 1.6s;
-} */
-
 
 /* js анимации */
 .rules_of_the_game, .microchips, .shtukovins {

@@ -34,7 +34,6 @@
 </body>
 </html> -->
 <?
-
 $servername = 'localhost';
 $username = 'root';
 $dbPassword = '';
@@ -67,5 +66,4 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 
 $conn->close();
-
 ?>

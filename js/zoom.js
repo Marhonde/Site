@@ -23,7 +23,6 @@ if (zoomPadsMS.length > 0) {
             if (currentZoom >= 500) {
                 zoomItemMS.classList.add('_zoomPadd');
             } else {
-                // setTimeout(removeZoomPaddMicrochips)
                 zoomItemMS.classList.remove('_zoomPadd');
                 zoomItemMS.classList.remove('_active--short');
                 zoomItemMS.classList.remove('_active');
@@ -34,7 +33,6 @@ if (zoomPadsMS.length > 0) {
             if (currentZoom >= 500) {
                 zoomItemSS.classList.add('_zoomPadd');
             } else {
-                // setTimeout(removeZoomPaddShtukovins)
                 zoomItemSS.classList.remove('_zoomPadd');
                 zoomItemMS.classList.remove('_active--short');
                 zoomItemSS.classList.remove('_active');
