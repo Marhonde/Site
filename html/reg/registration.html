@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../regCSS/regStyle.css">
-    <link rel="stylesheet" href="../regCSS/regForm.css">
-    <link rel="icon" type="image/png" href="../img/Logo.png">
+    <link rel="stylesheet" href="../../regCSS/regStyle.css">
+    <link rel="stylesheet" href="../../regCSS/regForm.css">
+    <link rel="icon" type="image/png" href="../../img/Logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация аккаунта</title>
 </head>
@@ -15,8 +15,8 @@
         <div class="wrapper">
             <h1>Давайте создадим<br> ваш аккаунт!</h1>
     
-            <form action="" method="post">
-                <input type="email" name="email" placeholder="Почта" class="email" required>
+            <form action="../../php/reg.php" method="post">
+                <input type="text" name="login" placeholder="Логин" class="email" required>
 
                 <input type="password" name="password" placeholder="Придумайте пароль" class="password" required>
 
@@ -26,7 +26,7 @@
             </form>
             
             <div class="have-account">
-                <p>Уже есть аккаунт? <a href="login.html">Войдите тут</a></p>
+                <p>Уже есть аккаунт? <a href="../login/login.html">Войдите тут</a></p>
             </div>
         </div>
 

@@ -1,4 +1,4 @@
-.email, .password {
+.login, .password {
     width: 57.5%;
     height: 55px;
     margin: 0 107px 57px;
@@ -10,12 +10,12 @@
     color: #333
 }
 
-.email::placeholder, .password::placeholder {
+.login::placeholder, .password::placeholder {
     font-size: 20px;
     color: #5C7180;
 }
 
-.email:focus, .password:focus {
+.login:focus, .password:focus {
     outline: none;
 }
 
@@ -44,6 +44,11 @@
 .enter-button:hover {
     background-color: #999999;
     border: 1px solid #BFBFBF;
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
 }
 
 /* .forgot-password {
