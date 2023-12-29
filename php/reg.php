@@ -15,19 +15,29 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $password = trim($_POST["password"]);
     $confirmPassword = trim($_POST["confirmPassword"]);
 
-    $sql = "INSERT INTO Users (Login, Password) VALUES ('$login', '$password')";
+    $query = "SELECT * FROM Users WHERE Login = '$login'";
+    $user = mysqli_fetch_assoc($conn->query($query));
 
-    if ($password === $confirmPassword) {
-        if ($conn->query($sql) === true) {
-            session_start();
-            header('Location: ../html/reg/regDone.html');
-            session_destroy();
+    $sql = "INSERT INTO Users (Login, Password) VALUES ('$login', '$password')";
+    if (empty($user)) {
+       if ($password === $confirmPassword) {
+            if ($conn->query($sql) === true) {
+                session_start();
+                $_SESSION['login'] = $login;
+                header('Location: index.php');
+                exit();
+            } else {
+                echo "Произошла ошибка! " . $conn->error;
+            }
         } else {
-            echo "Произошла ошибка! " . $conn->error;
+            header('Location: ../html/reg/regErrorPass.html');
+            exit();
         }
     } else {
-        header('Location: ../html/reg/regError.html');
+        header('Location: ../html/reg/regErrorUser.html');
+        exit();
     }
+    
 }
 
 $conn->close();

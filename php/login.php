@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if ($result->num_rows > 0) {
         session_start();
         $_SESSION['login'] = $login;
-        header('Location: ../html/login/logDone.html');
+        header('Location: index.php');
         exit();
     } else {
         header('Location: ../html/login/logError.html');

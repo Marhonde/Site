@@ -3,11 +3,12 @@
     margin: 1.5% 0 0 5%;
 }
 
-.form-content {
+.log-button-position {
     position: relative;
     float: right;
     width: 40%;
     height: 100%;
+    z-index: 999;
 }
 
 .login-button {
@@ -15,8 +16,6 @@
     font-size: 20px;
     font-weight: bold;
     color: #fff;
-    width: 140px;
-    height: 27px;
     margin: 5% 12.2% 0 0 ;
     max-height: max-content;
     width: 174px;
@@ -38,6 +37,5 @@
     color: #FFF;
     font-size: 20px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
 }

@@ -1,10 +1,19 @@
+<?
+session_start();
+if (!isset($_SESSION['login'])) {
+    header('Location: ../html/login/login.html');
+    exit();
+} else {
+    $login = $_SESSION['login'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/downloadGameButton.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/header.css"> <!-- стиль шапки -->
     <link rel="stylesheet" href="../css/style.css"> <!-- основные стили страницы -->
     <link rel="stylesheet" href="../css/animations.css"> <!-- анимации блоков(keyframes и анимации через js) -->
     <link rel="stylesheet" href="../css/cards.css"> <!-- стили блока карты и блоков внутри него -->
@@ -18,11 +27,129 @@
     <title>Машина времени</title>
     <!-- скрипт для скачивания файла из проекта -->
     <script src="../js/downloadGame.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        function openFile(pathToFile) {
-            window.open(pathToFile);
-        }
+        $(document).ready(function() {
+            let isExpanded = true;
+            let isHoverEnabled = true;
+            
+            $('#login').click(function() {
+
+                if (isExpanded) {
+                    $(this).addClass('_expanded');
+                    $(this).css('background', '#585858');
+                    $(this).css('border', '1px solid #7e7e7e');
+                    
+                    setTimeout(() => {
+                        $('#logout').css('opacity', '1');
+                        $('#logout').css('pointer-events', 'auto');
+                        $('#logout').addClass('_anim');
+                        $('#link-pos').addClass('_anim');
+                    }, 250);
+                } else {
+                    $(this).removeClass('_expanded');
+
+                    setTimeout(() => {
+                        $('#logout').css('opacity', '0');
+                        $('#logout').css('pointer-events', 'none');
+                        $('#logout').removeClass('_anim');
+                        $('#link-pos').removeClass('_anim');
+                    });
+                }
+
+                isExpanded = !isExpanded;
+            });
+
+            $('#login').mouseenter(function() {
+                if (isHoverEnabled && isExpanded) {
+                    $(this).css('background', '#737373');
+                    $(this).css('border', '1px solid #999999');
+                }
+            });
+
+            $('#login').mouseleave(function() {
+                if (isHoverEnabled && isExpanded) {
+                    $(this).css('background', '#585858');
+                    $(this).css('border', '1px solid #7e7e7e');
+                }
+            });
+
+            $('#login').one('click', function() {
+                isHoverEnabled = false;
+                setTimeout(() => {
+                    isHoverEnabled = true;
+                }, 250);
+            })
+        });
     </script>
+    <style>
+        .svg-pos {
+            position: absolute;
+            margin: 1.5% 0 0 5%;
+        }
+
+        .log-btn-pos {
+            position: relative;
+            float: right;
+            width: 40%;
+            height: 100%;
+        }
+
+        #login {
+            position: relative;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin: 5% 12.2% 0 0 ;
+            max-height: max-content;
+            width: 174px;
+            height: 43px; 
+            border: 1px solid #7e7e7e;
+            background: #585858;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all ease 0.2s;
+        }
+
+        ._expanded {
+            height: 86px!important;
+            cursor: auto!important;
+        }
+
+        ._anim {
+            transition: all ease 0.2s;
+            margin: 0;
+        }
+
+        #login p {
+            position: relative;
+            top: 10px;
+            text-align: center;
+            margin: 0;
+            color: #FFF;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: normal;
+        }
+
+        #logout {
+            position: relative;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 8px;
+            left: 54px;
+            text-decoration: none;
+            color: #ccc;
+            opacity: 0;
+        }
+
+        #logout:hover {
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <!-- картинка на заднем фоне сайта -->
@@ -40,12 +167,15 @@
                 </svg>
             </div>
 
-            <div class="log-button-position">
-                <button type="button" class="login-button" name="login" onclick="openFile('login/login.html')">
-                    <p style="font-weight: bold!important;">
-                        Вход
-                    </p>
-                </button>
+            <div class="log-btn-pos">
+                <div id="login">
+                    <p>
+                        <? echo "$login" ?>
+                    </p><br>
+                    <a id="logout" href="logout.php" style="pointer-events: none;">Выйти</a>
+                </div>
+                
+                <!-- <div class="login-active"> -->
             </div>
         </header>
 
