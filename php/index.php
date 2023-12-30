@@ -370,9 +370,9 @@ if (!isset($_SESSION['login'])) {
     </div>
 
     <div class="container" id="container" style="pointer-events: none; opacity: 0;">
-        <div class="dark close">
+        <div class="dark">
             <div class="accept">
-                <div id="cross" class="close">&#10006;</div>
+                <div id="cross">&#10006;</div>
                 <p>Вы действительно хотите<a href="logout.php"> выйти</a>?</p>
             </div>
         </div>
