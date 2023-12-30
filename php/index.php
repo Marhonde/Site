@@ -32,9 +32,20 @@ if (!isset($_SESSION['login'])) {
         $(document).ready(function() {
             let isExpanded = true;
             let isHoverEnabled = true;
+
+            $('#logout').click(() => {
+                $('#container').css('opacity', '1');
+                $('#container').css('pointer-events', 'auto');
+            });
+
+            $('#cross').click(() => {
+                $('#container').css('opacity', '0');
+                $('#container').css('pointer-events', 'none');
+
+                $('#container').removeClass('_anim');
+            });
             
             $('#login').click(function() {
-
                 if (isExpanded) {
                     $(this).addClass('_expanded');
                     $(this).css('background', '#585858');
@@ -49,12 +60,10 @@ if (!isset($_SESSION['login'])) {
                 } else {
                     $(this).removeClass('_expanded');
 
-                    setTimeout(() => {
-                        $('#logout').css('opacity', '0');
-                        $('#logout').css('pointer-events', 'none');
-                        $('#logout').removeClass('_anim');
-                        $('#link-pos').removeClass('_anim');
-                    });
+                    $('#logout').css('opacity', '0');
+                    $('#logout').css('pointer-events', 'none');
+                    $('#logout').removeClass('_anim');
+                    $('#link-pos').removeClass('_anim');
                 }
 
                 isExpanded = !isExpanded;
@@ -74,12 +83,12 @@ if (!isset($_SESSION['login'])) {
                 }
             });
 
-            $('#login').one('click', function() {
+            $('#login').one('click', () => {
                 isHoverEnabled = false;
                 setTimeout(() => {
                     isHoverEnabled = true;
                 }, 250);
-            })
+            });
         });
     </script>
     <style>
@@ -149,6 +158,74 @@ if (!isset($_SESSION['login'])) {
         #logout:hover {
             color: #fff;
         }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            background-size: cover;
+            position: fixed;
+            top: -0px;
+        }
+
+        .accept {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #7e7e7e;
+            background: #585858;
+            border-radius: 10px;
+            width: 35%;
+            height: 50%;
+            z-index: 999;
+            position: relative;
+            cursor: auto;
+        }
+
+        .dark {
+            z-index: 998;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .accept p {
+            color: #bfbfbf;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .accept a {
+            color: #f2f2f2;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all ease 0.2s;
+            font-size: 25px;
+        }
+
+        .accept a:hover {
+            color: #bfbfbf;
+        }
+
+        #cross {
+            color: #bfbfbf;
+            display: flex;
+            position: absolute;
+            top: 0px;
+            right: 9px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: all ease 0.2s;
+        }
+
+        #cross:hover {
+            color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
@@ -166,40 +243,40 @@ if (!isset($_SESSION['login'])) {
                     <path d="M42.6956 87.8986V89.8986H48.6956L42.6956 87.8986Z" fill="#94B5CD"/>
                 </svg>
             </div>
-
+            
             <div class="log-btn-pos">
                 <div id="login">
                     <p>
                         <? echo "$login" ?>
                     </p><br>
-                    <a id="logout" href="logout.php" style="pointer-events: none;">Выйти</a>
+                    <a id="logout" href="#" style="pointer-events: none;">Выйти</a>
                 </div>
                 
                 <!-- <div class="login-active"> -->
-            </div>
-        </header>
-
-        <main>
-            <h1>Машина времени</h1>
-
-            <!-- объявление блока с описанием игры -->
-            <div class="description_of_the_game">
-                <!-- объявление блока текста, для определения его позиции, чтобы анимации работали корректно  -->
-                <div class="paragraph">
-                    <p>
-                        «Машина времени» - В этом приключении игроков закинули в 1936 - 1945 год, и чтобы выбраться нужно сложить исторические события в хронологический порядок, чтобы самый умный игрок вернулся домой.
-                    </p>
+                    </div>
+                </header>
+                
+                <main>
+                    <h1>Машина времени</h1>
+                    
+                    <!-- объявление блока с описанием игры -->
+                    <div class="description_of_the_game">
+                        <!-- объявление блока текста, для определения его позиции, чтобы анимации работали корректно  -->
+                        <div class="paragraph">
+                            <p>
+                                «Машина времени» - В этом приключении игроков закинули в 1936 - 1945 год, и чтобы выбраться нужно сложить исторические события в хронологический порядок, чтобы самый умный игрок вернулся домой.
+                            </p>
                 </div>
             </div>
             <!-- конец блока с описанием игры -->
-
+            
             <!-- объявление блока карты, для размещения двух блоков внутри на одной линии -->
             <div class="cards">
                 <!-- объявление блока микросхемы -->
                 <div class="microchips _anim-items _anim-no-hide">
                     <!-- объявление блока для размещения картинки внутри -->
                     <div class="imgs">
-
+                        
                         <!-- объявлефяяние блока для центрирования картинок -->
                         <div class="img_to_center">
                             <!-- объявление блока для размещения картинки внутри -->
@@ -208,13 +285,13 @@ if (!isset($_SESSION['login'])) {
                                 <img class="img_in_cards1 _anim-items _anim-no-hide" src="../img/1-1.png" alt="Вторжение Германии в Польшу">
                             </div>
                         </div>
-
+                        
                         <div class="img_to_center">
                             <div class="img_content">
                                 <img class="img_in_cards2 _anim-items _anim-no-hide" src="../img/2-1.png" alt="Пакт Молотова-Риббентропа">
                             </div>
                         </div>
-
+                        
                     </div>
                     <!-- заголовок блока микросхемы -->
                     <h2 class="heading_2 _anim-items _anim-no-hide">Микросхемы</h2>
@@ -225,7 +302,7 @@ if (!isset($_SESSION['login'])) {
                     </div>
                 </div>
                 <!-- конец блока микросхемы -->
-
+                
                 <!-- объявление блока штуковины -->
                 <div class="shtukovins _anim-items _anim-no-hide">
                     <div class="imgs">
@@ -234,14 +311,14 @@ if (!isset($_SESSION['login'])) {
                                 <img class="img_in_cards3 _anim-items _anim-no-hide" src="../img/паяльник.png" alt="Паяльник">
                             </div>
                         </div>
-
+                        
                         <div class="img_to_center">
                             <div class="img_content">
                                 <img class="img_in_cards4 _anim-items _anim-no-hide" src="../img/процессор.png" alt="Процессор">
                             </div>
                         </div>
                     </div>
-
+                    
                     <h2 class="heading_3 _anim-items _anim-no-hide">Штуковины</h2>
                     <div class="paragraph_2 _anim-items _anim-no-hide">
                         <p>
@@ -263,17 +340,17 @@ if (!isset($_SESSION['login'])) {
                 </div>
             </div>
             <!-- конец блока с правилами -->
-
+            
             <!-- кнопка для скачивая файла -->
             <div class="download-btn-position">
                 <button type="button" onclick="/* функция из downloadGame.js */downloadFile('../Game/тут должна быть игра.txt')" class="download-game">Скачать игру</button>
             </div>
-
+            
             <footer>
                 <nav>
                     <ul>
                         <span>Связь с разработчиком: </span>
-
+                        
                         <li>
                             <a href="https://vk.com/marhonde" title="VKontakte">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
@@ -281,7 +358,7 @@ if (!isset($_SESSION['login'])) {
                                 </svg>
                             </a>
                         </li>
-
+                        
                         <li>
                             <a href="https://telegram.me/Marh0nde" title="Telegram">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="15.5" viewBox="0 0 496 512" >
@@ -293,11 +370,19 @@ if (!isset($_SESSION['login'])) {
                 </nav>
             </footer>
         </main>
-        
+    </div>
+
+    <div class="container" id="container" style="pointer-events: none; opacity: 0;">
+        <div class="dark close">
+            <div class="accept">
+                <div id="cross" class="close">&#10006;</div>
+                <p>Вы действительно хотите<a href="logout.php"> выйти</a>?</p>
+            </div>
+        </div>
     </div>
 </body>
-    <!-- подключение скрипта анимаций -->
-    <script src="../js/animScroll.js"></script>
-    <!-- подключение скрипта чинящий текст в блоке карты при приближении -->
-    <script src="../js/zoom.js"></script>
+<!-- подключение скрипта анимаций -->
+<script src="../js/animScroll.js"></script>
+<!-- подключение скрипта чинящий текст в блоке карты при приближении -->
+<script src="../js/zoom.js"></script>
 </html>
