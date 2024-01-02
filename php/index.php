@@ -1,19 +1,10 @@
-<?
-session_start();
-if (!isset($_SESSION['login'])) {
-    header('Location: ../html/login/login.html');
-    exit();
-} else {
-    $login = $_SESSION['login'];
-}
-?>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/downloadGameButton.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/phpHeader.css">
     <link rel="stylesheet" href="../css/style.css"> <!-- основные стили страницы -->
     <link rel="stylesheet" href="../css/animations.css"> <!-- анимации блоков(keyframes и анимации через js) -->
     <link rel="stylesheet" href="../css/cards.css"> <!-- стили блока карты и блоков внутри него -->
@@ -21,212 +12,27 @@ if (!isset($_SESSION['login'])) {
     <link rel="icon" type="image/png" href="../img/Logo.png"> <!-- логотип -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="'Машина времени' - карточная игра"> <!-- Описание страницы -->
+    <meta name="description" content="'Машина времени' - карточная игра про вторую мировую войну"> <!-- Описание страницы -->
     <meta name="author" content="Кузнецов Семён"> <!-- указывает автора страницы -->
     <meta name="keywords" content="игры, настольная игра, карточная игра, вторая мировая война, скачать машина времени"> <!-- подсказки для посковой системы -->
     <title>Машина времени</title>
     <!-- скрипт для скачивания файла из проекта -->
     <script src="../js/downloadGame.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let isExpanded = true;
-            let isHoverEnabled = true;
-
-            $('#logout').click(() => {
-                $('#container').css('opacity', '1');
-                $('#container').css('pointer-events', 'auto');
-            });
-
-            $('#cross').click(() => {
-                $('#container').css('opacity', '0');
-                $('#container').css('pointer-events', 'none');
-
-                $('#container').removeClass('_anim');
-            });
-            
-            $('#login').click(function() {
-                if (isExpanded) {
-                    $(this).addClass('_expanded');
-                    $(this).css('background', '#585858');
-                    $(this).css('border', '1px solid #7e7e7e');
-                    
-                    setTimeout(() => {
-                        $('#logout').css('opacity', '1');
-                        $('#logout').css('pointer-events', 'auto');
-                        $('#logout').addClass('_anim');
-                        $('#link-pos').addClass('_anim');
-                    }, 250);
-                } else {
-                    $(this).removeClass('_expanded');
-
-                    $('#logout').css('opacity', '0');
-                    $('#logout').css('pointer-events', 'none');
-                    $('#logout').removeClass('_anim');
-                    $('#link-pos').removeClass('_anim');
-                }
-
-                isExpanded = !isExpanded;
-            });
-
-            $('#login').mouseenter(function() {
-                if (isHoverEnabled && isExpanded) {
-                    $(this).css('background', '#737373');
-                    $(this).css('border', '1px solid #999999');
-                }
-            });
-
-            $('#login').mouseleave(function() {
-                if (isHoverEnabled && isExpanded) {
-                    $(this).css('background', '#585858');
-                    $(this).css('border', '1px solid #7e7e7e');
-                }
-            });
-
-            $('#login').one('click', () => {
-                isHoverEnabled = false;
-                setTimeout(() => {
-                    isHoverEnabled = true;
-                }, 250);
-            });
-        });
-    </script>
-    <style>
-        .svg-pos {
-            position: absolute;
-            margin: 1.5% 0 0 5%;
-        }
-
-        .log-btn-pos {
-            position: relative;
-            float: right;
-            width: 40%;
-            height: 100%;
-        }
-
-        #login {
-            position: relative;
-            float: right;
-            font-size: 20px;
-            font-weight: bold;
-            color: #fff;
-            margin: 5% 12.2% 0 0 ;
-            max-height: max-content;
-            width: 174px;
-            height: 43px; 
-            border: 1px solid #7e7e7e;
-            background: #585858;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all ease 0.2s;
-        }
-
-        ._expanded {
-            height: 86px!important;
-            cursor: auto!important;
-        }
-
-        ._anim {
-            transition: all ease 0.2s;
-            margin: 0;
-        }
-
-        #login p {
-            position: relative;
-            top: 10px;
-            text-align: center;
-            margin: 0;
-            color: #FFF;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: bold;
-            line-height: normal;
-        }
-
-        #logout {
-            position: relative;
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            top: 8px;
-            left: 54px;
-            text-decoration: none;
-            color: #ccc;
-            opacity: 0;
-        }
-
-        #logout:hover {
-            color: #fff;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            background-size: cover;
-            position: fixed;
-            top: -0px;
-        }
-
-        .accept {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #7e7e7e;
-            background: #585858;
-            border-radius: 10px;
-            width: 35%;
-            height: 50%;
-            z-index: 999;
-            position: relative;
-            cursor: auto;
-        }
-
-        .dark {
-            z-index: 998;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgb(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .accept p {
-            color: #bfbfbf;
-            font-weight: bold;
-            font-size: 25px;
-        }
-
-        .accept a {
-            color: #f2f2f2;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all ease 0.2s;
-            font-size: 25px;
-        }
-
-        .accept a:hover {
-            color: #bfbfbf;
-        }
-
-        #cross {
-            color: #bfbfbf;
-            display: flex;
-            position: absolute;
-            top: 0px;
-            right: 9px;
-            font-size: 25px;
-            cursor: pointer;
-            transition: all ease 0.2s;
-        }
-
-        #cross:hover {
-            color: #f2f2f2;
-        }
-    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <?
+    session_start();
+    if (!isset($_SESSION['login'])) {
+        $login = "Вход";
+        $openFile = file_get_contents('../js/openFile.js');
+        echo $openFile;
+        echo "<style>#login:hover {background: #737373; border: 1px solid #999999}</style>";
+    } else {
+        $login = $_SESSION['login'];
+        $logout = "Выйти";
+        $modalWindow = file_get_contents('../js/modalWindow.js');
+        echo $modalWindow;
+    }
+    ?>
 </head>
 <body>
     <!-- картинка на заднем фоне сайта -->
@@ -249,7 +55,7 @@ if (!isset($_SESSION['login'])) {
                     <p>
                         <? echo "$login" ?>
                     </p><br>
-                    <a id="logout" href="#" style="pointer-events: none;">Выйти</a>
+                    <a id="logout" href="#" style="pointer-events: none;"><?if (isset($logout)) echo $logout;?></a>
                 </div>
             </div>
         </header>
