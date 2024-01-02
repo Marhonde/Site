@@ -15,7 +15,7 @@
     <meta name="description" content="'Машина времени' - карточная игра про вторую мировую войну"> <!-- Описание страницы -->
     <meta name="author" content="Кузнецов Семён"> <!-- указывает автора страницы -->
     <meta name="keywords" content="игры, настольная игра, карточная игра, вторая мировая война, скачать машина времени"> <!-- подсказки для посковой системы -->
-    <title>Машина времени</title>
+    <title>Машина Времени</title>
     <!-- скрипт для скачивания файла из проекта -->
     <script src="../js/downloadGame.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -28,7 +28,6 @@
         echo "<style>#login:hover {background: #737373; border: 1px solid #999999}</style>";
     } else {
         $login = $_SESSION['login'];
-        $logout = "Выйти";
         $modalWindow = file_get_contents('../js/modalWindow.js');
         echo $modalWindow;
     }
@@ -54,8 +53,8 @@
                 <div id="login">
                     <p>
                         <? echo "$login" ?>
-                    </p><br>
-                    <a id="logout" href="#" style="pointer-events: none;"><?if (isset($logout)) echo $logout;?></a>
+                    </p>
+                    <a id="logout" href="#" style="pointer-events: none; top: 31px;">Выйти</a>
                 </div>
             </div>
         </header>
