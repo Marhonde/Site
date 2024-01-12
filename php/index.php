@@ -54,7 +54,7 @@
                     <p>
                         <? echo "$login" ?>
                     </p>
-                    <a id="logout" href="#" style="pointer-events: none; top: 31px;">Выйти</a>
+                    <a id="logout" href="#" style="pointer-events: none;">Выйти</a>
                 </div>
             </div>
         </header>
