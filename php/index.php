@@ -24,12 +24,12 @@
     if (!isset($_SESSION['login'])) {
         $login = "Вход";
         $openFile = file_get_contents('../js/openFile.js');
-        echo $openFile;
+        echo "<script>$openFile</script>";
         echo "<style>#login:hover {background: #737373; border: 1px solid #999999}</style>";
     } else {
         $login = $_SESSION['login'];
         $modalWindow = file_get_contents('../js/modalWindow.js');
-        echo $modalWindow;
+        echo "<script>$modalWindow</script>";
     }
     ?>
 </head>

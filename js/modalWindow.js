@@ -1,4 +1,3 @@
-<script>
 $(document).ready(function() { 
 
     let isExpanded = true;
@@ -83,4 +82,3 @@ $(document).ready(function() {
         });
     }
 });
-</script>
