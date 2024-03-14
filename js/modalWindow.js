@@ -67,6 +67,14 @@ $(document).ready(function() {
             isHoverEnabled = true;
         }, 250);
     });
+    
+    document.addEventListener('keydown', (event) => {
+        let click = event.key
+        if (click === 'Escape') {
+            opacityPointerEventsOff('#container');
+            $('#container').removeClass('_anim');
+        }
+    })
 
     function opacityPointerEventsOn(selector) {
         $(selector).css({
@@ -81,4 +89,5 @@ $(document).ready(function() {
             'pointer-events': 'none'
         });
     }
+
 });
