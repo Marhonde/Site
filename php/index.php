@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/animations.css"> <!-- анимации блоков(keyframes и анимации через js) -->
     <link rel="stylesheet" href="../css/cards.css"> <!-- стили блока карты и блоков внутри него -->
     <link rel="stylesheet" href="../css/zoom.css"> <!-- изменение размера текста при приближении внутри блока карты -->
-    <link rel="icon" type="image/png" href="../img/Logo.png"> <!-- логотип -->
+     <!-- логотип -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="'Машина времени' - карточная игра про вторую мировую войну"> <!-- Описание страницы -->
